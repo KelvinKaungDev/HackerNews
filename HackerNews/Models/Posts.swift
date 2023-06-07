@@ -23,7 +23,9 @@ class Posts : ObservableObject {
         let decoder = JSONDecoder()
         do {
             let result = try decoder.decode(PostDecode.self, from: data)
-            postDetails = result.hits
+            DispatchQueue.main.async {
+                self.postDetails = result.hits
+            }
         } catch {
             print(error)
         }

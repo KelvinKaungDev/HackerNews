@@ -11,5 +11,5 @@ struct PostDetails : Codable, Identifiable {
     let objectID : String
     let points : Int
     let title : String
-    let url : String
+    let url : String?
 }

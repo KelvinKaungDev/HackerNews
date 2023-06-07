@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HackerNews
-//
-//  Created by Kelvin Gao  on 6/6/2566 BE.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -15,7 +8,7 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 List(posts.postDetails) { post in
-                    NavigationLink(destination: PostDetailsView()) {
+                    NavigationLink(destination: PostDetailsView(url: post.url)) {
                         HStack {
                             Text(String(post.points))
                             Text(post.title)
